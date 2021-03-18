@@ -25,6 +25,13 @@ export class Tab1Page {
     },
   ];
 
+  slideOptions: any = {
+    slidesPerView: 2.4,
+    slidesOffsetBefore: 20,
+    spaceBetween: 20,
+    freeMode: true,
+  };
+
   constructor() {}
 
   // Helper function for image names

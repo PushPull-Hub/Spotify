@@ -9,7 +9,7 @@
                 <ion-icon name="settings-outline" slot="icon-only"></ion-icon>
             </ion-button>
         </ion-col>
-        <ion-slides>
+        <ion-slides [options]="slideOptions">
             <ion-slide *ngFor="let album of entry.albums">
                 <img [src]="'/assets/images/albums/'+dasherize(album.image)+'.jpg'">
                 <span class="title">{{ album.title }}</span>
