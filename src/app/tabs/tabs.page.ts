@@ -9,6 +9,7 @@ import { IonTabs } from '@ionic/angular';
 export class TabsPage {
   @ViewChild('tabs') tabs: IonTabs;
   selectedTab: string = '';
+  progress = 42;
 
   constructor() {}
 
