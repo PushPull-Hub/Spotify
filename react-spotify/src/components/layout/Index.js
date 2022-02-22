@@ -1,14 +1,14 @@
 import React from 'react';
-import Music from '../music/Music';
-import SongGenerator from '../generator/SongGenerator'
+import SongList from '../music/SongList';
+import SongGenerator from '../generator/SongGenerator';
 
 const Index = () => {
   return (
     <React.Fragment>
-        <SongGenerator/>
-        <Music />
+      <SongGenerator />
+      <SongList />
     </React.Fragment>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;
