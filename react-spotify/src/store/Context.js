@@ -14,10 +14,13 @@ export class Provider extends Component {
   }
 
   createStateObject(songs) {
-    console.log(songs);
     return {
       songsList: songs,
       extraThing: '',
+      selectedTab: {
+        title: 'Songs',
+        theme: 'bg-success',
+      },
     };
   }
 

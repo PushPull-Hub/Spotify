@@ -9,8 +9,7 @@ const SongList = () => {
         if (value) {
           return (
             <>
-              <h3 className='text-center mb-4'>songs</h3>
-              <div className='row'>
+              <div className={'row p-3 ' + value.selectedTab.theme}>
                 {value.songsList.map((song) => (
                   <Song key={song.id} song={song} />
                 ))}
