@@ -6,7 +6,7 @@ export const Context = React.createContext();
 export class Provider extends Component {
   constructor(props) {
     super(props);
-    this.changeActiveTab = this.changeActiveTab.bind(this);
+    this.updateState = this.updateState.bind(this);
   }
 
   componentDidMount() {
@@ -48,14 +48,12 @@ export class Provider extends Component {
         theme: 'bg-success',
         component: 'SongList',
       },
-      changeActiveTab: this.changeActiveTab,
+      updateState: this.updateState,
     };
   }
 
-  changeActiveTab(tab) {
-    this.setState({
-      selectedTab: tab,
-    });
+  updateState(newState) {
+    this.setState(newState);
   }
 
   render() {

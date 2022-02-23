@@ -10,7 +10,14 @@ const Index = () => {
   const state = useContext(Context);
 
   const setToActive = (tab) => {
-    state.changeActiveTab(tab);
+    state.updateState({ selectedTab: tab });
+  };
+
+  const changeSongBelonging = (songId) => {
+    const newSongsList = [...state.songsList];
+    let theTargettedSong = newSongsList.find((song) => song.id === songId);
+    theTargettedSong.isOneOfFav = !theTargettedSong.isOneOfFav;
+    state.updateState({ songsList: newSongsList });
   };
 
   if (state && state.tabs) {
@@ -21,8 +28,20 @@ const Index = () => {
         <div className={'container ' + state.selectedTab.theme}>
           <h1 className='text-center mb-4'>{state.selectedTab.title}</h1>
           <Switch>
-            <Route exact path='/' component={SongList}></Route>
-            <Route exact path='/favourites' component={Favourites}></Route>
+            <Route
+              exact
+              path='/'
+              render={(props) => (
+                <SongList addToFavourites={changeSongBelonging} />
+              )}
+            ></Route>
+            <Route
+              exact
+              path='/favourites'
+              render={(props) => (
+                <Favourites removeFromFavourites={changeSongBelonging} />
+              )}
+            ></Route>
             <Route
               exact
               path='/songGenerator'
