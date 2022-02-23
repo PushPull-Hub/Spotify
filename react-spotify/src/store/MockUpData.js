@@ -13,7 +13,7 @@ let dummySongData = [
     artist: 'Waylon Freschini',
     publishedThe: '4/28/2021',
     duration: '9:07 PM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ let dummySongData = [
     artist: 'Emmalynn Mant',
     publishedThe: '2/7/2022',
     duration: '1:23 AM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ let dummySongData = [
     artist: 'Barbe Orringe',
     publishedThe: '11/18/2021',
     duration: '3:21 AM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 5,
@@ -54,7 +54,7 @@ let dummySongData = [
     artist: 'Vivia McKendo',
     publishedThe: '3/24/2021',
     duration: '2:22 AM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 8,
@@ -62,7 +62,7 @@ let dummySongData = [
     artist: 'Elnore Itzakovitz',
     publishedThe: '12/27/2021',
     duration: '5:19 AM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 9,
@@ -78,7 +78,7 @@ let dummySongData = [
     artist: 'Bennie McNerlin',
     publishedThe: '7/10/2021',
     duration: '10:56 PM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 11,
@@ -94,7 +94,7 @@ let dummySongData = [
     artist: 'Natty Sommerland',
     publishedThe: '11/8/2021',
     duration: '4:56 AM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 13,
@@ -102,7 +102,7 @@ let dummySongData = [
     artist: 'Chucho Wolfart',
     publishedThe: '9/18/2021',
     duration: '10:13 PM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 14,
@@ -110,7 +110,7 @@ let dummySongData = [
     artist: 'Karlee Findon',
     publishedThe: '6/12/2021',
     duration: '6:39 AM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 15,
@@ -126,7 +126,7 @@ let dummySongData = [
     artist: 'Gabby Zanneli',
     publishedThe: '9/11/2021',
     duration: '9:36 PM',
-    isOneOfFav: false,
+    isOneOfFav: true,
   },
   {
     id: 17,
@@ -142,7 +142,7 @@ let dummySongData = [
     artist: 'Nevin Sprull',
     publishedThe: '9/22/2021',
     duration: '5:34 AM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 19,
@@ -158,7 +158,7 @@ let dummySongData = [
     artist: 'Rafaela Hubbuck',
     publishedThe: '8/1/2021',
     duration: '10:10 PM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 21,
@@ -166,7 +166,7 @@ let dummySongData = [
     artist: 'Dorita Fould',
     publishedThe: '1/27/2022',
     duration: '3:22 AM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 22,
@@ -174,7 +174,7 @@ let dummySongData = [
     artist: 'Marj Folini',
     publishedThe: '11/8/2021',
     duration: '7:40 PM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 23,
@@ -182,7 +182,7 @@ let dummySongData = [
     artist: 'Aldous Dulin',
     publishedThe: '8/29/2021',
     duration: '11:45 AM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 24,
@@ -223,7 +223,7 @@ let dummySongData = [
     artist: 'Micky Tune',
     publishedThe: '1/12/2022',
     duration: '1:30 PM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 29,
@@ -239,7 +239,7 @@ let dummySongData = [
     artist: 'Lutero Drivers',
     publishedThe: '11/26/2021',
     duration: '4:03 PM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 31,
@@ -247,7 +247,7 @@ let dummySongData = [
     artist: 'Auberta Cleeves',
     publishedThe: '6/22/2021',
     duration: '5:39 AM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 32,
@@ -263,7 +263,7 @@ let dummySongData = [
     artist: 'Reta Aistrop',
     publishedThe: '5/30/2021',
     duration: '3:19 PM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 34,
@@ -287,7 +287,7 @@ let dummySongData = [
     artist: 'Yank Kleimt',
     publishedThe: '6/15/2021',
     duration: '11:55 PM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 37,
@@ -335,7 +335,7 @@ let dummySongData = [
     artist: 'Ernest Lovell',
     publishedThe: '9/6/2021',
     duration: '2:33 AM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 43,
@@ -343,7 +343,7 @@ let dummySongData = [
     artist: 'Myron Bannard',
     publishedThe: '8/8/2021',
     duration: '6:17 AM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 44,
@@ -351,7 +351,7 @@ let dummySongData = [
     artist: 'Wallie Cowles',
     publishedThe: '11/13/2021',
     duration: '11:24 AM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 45,
@@ -359,7 +359,7 @@ let dummySongData = [
     artist: 'Colline McGahern',
     publishedThe: '7/29/2021',
     duration: '11:12 PM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 46,
@@ -383,7 +383,7 @@ let dummySongData = [
     artist: 'Angie Rainsbury',
     publishedThe: '1/10/2022',
     duration: '5:25 AM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 49,
@@ -399,7 +399,7 @@ let dummySongData = [
     artist: 'Gherardo Reckless',
     publishedThe: '10/22/2021',
     duration: '9:16 PM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 51,
@@ -423,7 +423,7 @@ let dummySongData = [
     artist: 'Winna Howen',
     publishedThe: '9/14/2021',
     duration: '2:25 PM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 54,
@@ -439,7 +439,7 @@ let dummySongData = [
     artist: 'Buffy Worsom',
     publishedThe: '5/27/2021',
     duration: '3:47 AM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 56,
@@ -455,7 +455,7 @@ let dummySongData = [
     artist: 'Granger Peacop',
     publishedThe: '5/24/2021',
     duration: '11:30 PM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 58,
@@ -479,7 +479,7 @@ let dummySongData = [
     artist: 'Shelby Julian',
     publishedThe: '12/2/2021',
     duration: '2:01 AM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 61,
@@ -487,7 +487,7 @@ let dummySongData = [
     artist: 'Lindsy Whall',
     publishedThe: '6/19/2021',
     duration: '12:11 AM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 62,
@@ -495,7 +495,7 @@ let dummySongData = [
     artist: 'Hollyanne Yon',
     publishedThe: '5/6/2021',
     duration: '8:29 AM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 63,
@@ -503,7 +503,7 @@ let dummySongData = [
     artist: 'Rhiamon Tersay',
     publishedThe: '4/21/2021',
     duration: '5:33 PM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 64,
@@ -527,7 +527,7 @@ let dummySongData = [
     artist: 'Jard Huddleston',
     publishedThe: '10/5/2021',
     duration: '4:51 PM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 67,
@@ -535,7 +535,7 @@ let dummySongData = [
     artist: 'Merv Millington',
     publishedThe: '9/11/2021',
     duration: '5:57 AM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 68,
@@ -567,7 +567,7 @@ let dummySongData = [
     artist: 'Hollyanne Borsnall',
     publishedThe: '5/20/2021',
     duration: '2:05 AM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 72,
@@ -592,7 +592,7 @@ let dummySongData = [
     artist: 'Germana Cecchetelli',
     publishedThe: '6/4/2021',
     duration: '7:30 PM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 75,
@@ -608,7 +608,7 @@ let dummySongData = [
     artist: 'Kane Fairbrace',
     publishedThe: '7/25/2021',
     duration: '4:48 PM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 77,
@@ -616,7 +616,7 @@ let dummySongData = [
     artist: 'Chrissie Scrowton',
     publishedThe: '10/9/2021',
     duration: '7:45 AM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 78,
@@ -624,7 +624,7 @@ let dummySongData = [
     artist: 'Gasper Netherwood',
     publishedThe: '11/24/2021',
     duration: '5:06 AM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 79,
@@ -640,7 +640,7 @@ let dummySongData = [
     artist: 'Dinny Gookey',
     publishedThe: '12/15/2021',
     duration: '1:18 PM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 81,
@@ -664,7 +664,7 @@ let dummySongData = [
     artist: 'Noami Ranger',
     publishedThe: '7/12/2021',
     duration: '7:39 AM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 84,
@@ -688,7 +688,7 @@ let dummySongData = [
     artist: 'Lock Winsiowiecki',
     publishedThe: '3/18/2021',
     duration: '8:09 AM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 87,
@@ -728,7 +728,7 @@ let dummySongData = [
     artist: 'Annette Badwick',
     publishedThe: '5/13/2021',
     duration: '2:45 AM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 92,
@@ -736,7 +736,7 @@ let dummySongData = [
     artist: 'Philbert Millier',
     publishedThe: '10/12/2021',
     duration: '6:48 AM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 93,
@@ -752,7 +752,7 @@ let dummySongData = [
     artist: 'Trent Philpotts',
     publishedThe: '9/27/2021',
     duration: '4:08 PM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 95,
@@ -768,7 +768,7 @@ let dummySongData = [
     artist: 'Vi MacLise',
     publishedThe: '3/12/2021',
     duration: '8:32 PM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 97,
@@ -776,7 +776,7 @@ let dummySongData = [
     artist: 'Ezekiel Furminger',
     publishedThe: '10/11/2021',
     duration: '3:29 AM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 98,
@@ -784,7 +784,7 @@ let dummySongData = [
     artist: 'Chiquia Heap',
     publishedThe: '7/29/2021',
     duration: '7:00 AM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 99,
@@ -792,7 +792,7 @@ let dummySongData = [
     artist: 'Willetta Hearn',
     publishedThe: '4/19/2021',
     duration: '5:48 PM',
-    isOneOfFav: true,
+    isOneOfFav: false,
   },
   {
     id: 100,
