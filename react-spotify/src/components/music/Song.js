@@ -1,13 +1,31 @@
 import React from 'react';
 
-const Song = (prop) => {
-  const { song } = prop;
+const Song = ({ song, handleHeartIconClick }) => {
+  const changeSongStatue = (id) => {
+    handleHeartIconClick(id);
+  };
+
   if (song) {
     return (
       <div className='col-md-6'>
         <div className='card mb-4 shadow-sm'>
           <div className='card-body'>
-            <h5>{song.track_name}</h5>
+            <div className='d-flex justify-content-between'>
+              <h5>{song.track_name}</h5>
+              <button
+                type='button'
+                className='btn '
+                onClick={() => changeSongStatue(song.id)}
+              >
+                <strong>
+                  <i
+                    className='fas fa-heart'
+                    style={{ color: song.isOneOfFav ? 'red' : 'black' }}
+                  />
+                </strong>
+              </button>
+            </div>
+
             <p className='card-text'>
               <strong>
                 <i className='fas fa-play' /> Artist
