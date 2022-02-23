@@ -1,4 +1,4 @@
-const mockUpData = [
+let dummySongData = [
   {
     id: 1,
     track_name: 'Living Room of the Nation, The (Kansakunnan olohuone)',
@@ -804,27 +804,71 @@ const mockUpData = [
   },
 ];
 
-const crudMethods = {
+export const crudMethods = {
   getSongs: async function () {
     return await new Promise((resolve) => {
       setTimeout(() => {
-        resolve(mockUpData);
-      }, 900);
+        resolve(dummySongData);
+      }, 3000);
     });
   },
 
   getSongById: async function (id) {
     return await new Promise((resolve) => {
       setTimeout(() => {
-        const song = mockUpData.find((song) => song.idTrack === id);
+        const song = dummySongData.find((song) => song.idTrack === id);
         song ? resolve(song) : resolve(null);
-      }, 1000);
+      }, 3000);
     });
   },
 
-  addSong: function () {},
+  addSong: async function (songItem) {
+    return await new Promise((resolve) => {
+      setTimeout(() => {
+        dummySongData = [...dummySongData, songItem];
+        resolve(dummySongData);
+      }, 3000);
+    });
+  },
 
-  removeSong: function () {},
+  removeSong: async function (id) {
+    return await new Promise((resolve) => {
+      setTimeout(() => {
+        dummySongData = dummySongData.filter((song) => song.id !== id);
+        resolve(dummySongData);
+      }, 3000);
+    });
+  },
 };
 
-export default crudMethods;
+export const userInterfaceMethods = {
+  getTabs: function () {
+    return new Promise((resolve) => {
+      const tabs = [
+        {
+          title: 'Songs',
+          theme: ' bg-success',
+          itsPage: '/',
+          component: 'SongList',
+        },
+
+        {
+          title: 'Favorites',
+          theme: ' bg-danger',
+          itsPage: '/favourites',
+          component: 'Favourites',
+        },
+
+        {
+          title: 'Generator',
+          theme: ' bg-info',
+          itsPage: '/songGenerator',
+          component: 'SongGenerator',
+        },
+      ];
+      setTimeout(() => {
+        resolve(tabs);
+      }, 3000);
+    });
+  },
+};
