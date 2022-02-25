@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { crudMethods } from './MockUpData';
+import { SongApi, ConfigurationsApi } from '../components/helper/Apis';
 
 export const Context = React.createContext();
 
@@ -10,46 +10,49 @@ export class Provider extends Component {
   }
 
   componentDidMount() {
-    crudMethods
-      .getSongs()
-      .then((songs) =>
-        songs ? this.setState(() => this.createDefaultState(songs)) : null
-      )
-      .catch((error) => alert(error));
+    this.initializeState()
+      .then((state) => this.setState(state))
+      .catch((error) => console.error(error));
   }
 
-  createDefaultState(songs) {
-    return {
-      songsList: songs,
-      tabs: [
-        {
-          title: 'Songs',
-          theme: ' bg-success',
-          itsPage: '/',
-          component: 'SongList',
-        },
+  async initializeState() {
+    return new Promise(async (resolve) => {
+      try {
+        const songList = await this.getSongsPromise();
+        const configs = await this.getConfigurationsPromise();
+        const updateState = this.updateState;
+        resolve({ songList, configs, updateState });
+      } catch (error) {
+        console.error(error);
+        resolve(null);
+      }
+    });
+  }
 
-        {
-          title: 'Favorites',
-          theme: ' bg-danger',
-          itsPage: '/favourites',
-          component: 'Favourites',
-        },
+  getSongsPromise() {
+    return new Promise(async (resolve) => {
+      try {
+        const songApi = new SongApi();
+        const response = await songApi.getSongList();
+        response && response.data ? resolve(response.data) : resolve(null);
+      } catch (error) {
+        console.error(error);
+        resolve(null);
+      }
+    });
+  }
 
-        {
-          title: 'Generator',
-          theme: ' bg-info',
-          itsPage: '/songGenerator',
-          component: 'SongGenerator',
-        },
-      ],
-      selectedTab: {
-        title: 'Songs',
-        theme: 'bg-success',
-        component: 'SongList',
-      },
-      updateState: this.updateState,
-    };
+  getConfigurationsPromise() {
+    return new Promise(async (resolve) => {
+      try {
+        const configsApi = new ConfigurationsApi();
+        const response = await configsApi.getAppConfigurations();
+        response && response.data ? resolve(response.data) : resolve(null);
+      } catch (error) {
+        console.error(error);
+        resolve(null);
+      }
+    });
   }
 
   updateState(newState) {

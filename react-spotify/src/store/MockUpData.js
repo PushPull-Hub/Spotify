@@ -1,874 +1,270 @@
-let dummySongData = [
-  {
-    id: 1,
-    track_name: 'Living Room of the Nation, The (Kansakunnan olohuone)',
-    artist: 'Cele Luckie',
-    publishedThe: '8/18/2021',
-    duration: '8:40 AM',
-    isOneOfFav: true,
-  },
-  {
-    id: 2,
-    track_name: 'Port of Flowers',
-    artist: 'Waylon Freschini',
-    publishedThe: '4/28/2021',
-    duration: '9:07 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 3,
-    track_name: 'Reign Over Me',
-    artist: 'Emmalynn Mant',
-    publishedThe: '2/7/2022',
-    duration: '1:23 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 4,
-    track_name: 'All About the Benjamins',
-    artist: 'Barbe Orringe',
-    publishedThe: '11/18/2021',
-    duration: '3:21 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 5,
-    track_name:
-      "Agatha Christie's 'Ten Little Indians' (Ten Little Indians) (And Then There Were None)",
-    artist: 'Aviva Slaymaker',
-    publishedThe: '9/7/2021',
-    duration: '11:47 PM',
-    isOneOfFav: true,
-  },
-  {
-    id: 6,
-    track_name: 'Eyewitness (Janitor, The)',
-    artist: 'Lennie Sprackling',
-    publishedThe: '8/8/2021',
-    duration: '10:45 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 7,
-    track_name: 'Now!',
-    artist: 'Vivia McKendo',
-    publishedThe: '3/24/2021',
-    duration: '2:22 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 8,
-    track_name: 'Agnosia',
-    artist: 'Elnore Itzakovitz',
-    publishedThe: '12/27/2021',
-    duration: '5:19 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 9,
-    track_name: 'Forest of the Gods (Dievu miskas)',
-    artist: 'Saundra Mulliss',
-    publishedThe: '3/17/2021',
-    duration: '5:47 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 10,
-    track_name: '25 Watts',
-    artist: 'Bennie McNerlin',
-    publishedThe: '7/10/2021',
-    duration: '10:56 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 11,
-    track_name: 'Monday',
-    artist: 'Clemente Liven',
-    publishedThe: '1/23/2022',
-    duration: '4:43 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 12,
-    track_name: 'Return to Sender',
-    artist: 'Natty Sommerland',
-    publishedThe: '11/8/2021',
-    duration: '4:56 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 13,
-    track_name: 'Second Jungle Book: Mowgli & Baloo, The',
-    artist: 'Chucho Wolfart',
-    publishedThe: '9/18/2021',
-    duration: '10:13 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 14,
-    track_name: 'Fear No Evil',
-    artist: 'Karlee Findon',
-    publishedThe: '6/12/2021',
-    duration: '6:39 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 15,
-    track_name: 'Crime of Father Amaro, The (Crimen del padre Amaro, El)',
-    artist: 'Sancho McMullen',
-    publishedThe: '4/14/2021',
-    duration: '4:28 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 16,
-    track_name: 'Bruiser',
-    artist: 'Gabby Zanneli',
-    publishedThe: '9/11/2021',
-    duration: '9:36 PM',
-    isOneOfFav: true,
-  },
-  {
-    id: 17,
-    track_name: 'Paul Blart: Mall Cop',
-    artist: 'Dimitry McQuillen',
-    publishedThe: '4/29/2021',
-    duration: '1:21 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 18,
-    track_name: 'Burrowers, The',
-    artist: 'Nevin Sprull',
-    publishedThe: '9/22/2021',
-    duration: '5:34 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 19,
-    track_name: 'Execution of P, The (Kinatay)',
-    artist: 'Carlos Eddolls',
-    publishedThe: '2/6/2022',
-    duration: '10:21 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 20,
-    track_name: 'Just Cause',
-    artist: 'Rafaela Hubbuck',
-    publishedThe: '8/1/2021',
-    duration: '10:10 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 21,
-    track_name: 'The Court-Martial of Jackie Robinson',
-    artist: 'Dorita Fould',
-    publishedThe: '1/27/2022',
-    duration: '3:22 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 22,
-    track_name: 'First Time, The',
-    artist: 'Marj Folini',
-    publishedThe: '11/8/2021',
-    duration: '7:40 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 23,
-    track_name: "No. 1 Ladies' Detective Agency, The",
-    artist: 'Aldous Dulin',
-    publishedThe: '8/29/2021',
-    duration: '11:45 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 24,
-    track_name: '20,000 Years in Sing Sing',
-    artist: 'Gerrie Matskevich',
-    publishedThe: '9/19/2021',
-    duration: '8:43 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 25,
-    track_name:
-      'Maxed Out: Hard Times, Easy Credit and the Era of Predatory Lenders',
-    artist: 'Catha Mountstephen',
-    publishedThe: '9/29/2021',
-    duration: '2:19 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 26,
-    track_name: 'Distant (Uzak)',
-    artist: "Evita O'Doogan",
-    publishedThe: '8/8/2021',
-    duration: '7:00 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 27,
-    track_name: 'Seconds',
-    artist: 'Sadella Dinnis',
-    publishedThe: '5/8/2021',
-    duration: '8:07 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 28,
-    track_name: 'Race with the Devil',
-    artist: 'Micky Tune',
-    publishedThe: '1/12/2022',
-    duration: '1:30 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 29,
-    track_name: 'Visitor, The',
-    artist: 'Jeffy Giovannazzi',
-    publishedThe: '9/23/2021',
-    duration: '5:35 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 30,
-    track_name: 'Wrath of the Titans',
-    artist: 'Lutero Drivers',
-    publishedThe: '11/26/2021',
-    duration: '4:03 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 31,
-    track_name: 'Dark Half, The',
-    artist: 'Auberta Cleeves',
-    publishedThe: '6/22/2021',
-    duration: '5:39 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 32,
-    track_name: 'Tender Mercies',
-    artist: 'Ferdinand Niblett',
-    publishedThe: '9/9/2021',
-    duration: '9:09 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 33,
-    track_name: 'Dennis the Menace',
-    artist: 'Reta Aistrop',
-    publishedThe: '5/30/2021',
-    duration: '3:19 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 34,
-    track_name: 'Butterfly Kiss',
-    artist: 'Pyotr Woodyer',
-    publishedThe: '11/13/2021',
-    duration: '12:08 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 35,
-    track_name: 'Doctor Takes a Wife, The',
-    artist: 'Linea Scapens',
-    publishedThe: '3/30/2021',
-    duration: '1:03 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 36,
-    track_name: 'The Joy of Living',
-    artist: 'Yank Kleimt',
-    publishedThe: '6/15/2021',
-    duration: '11:55 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 37,
-    track_name: 'Volver',
-    artist: 'Nanette Canepe',
-    publishedThe: '6/30/2021',
-    duration: '12:21 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 38,
-    track_name: 'ABC Africa',
-    artist: 'Miles Fahey',
-    publishedThe: '11/30/2021',
-    duration: '3:17 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 39,
-    track_name: 'Mr. Nice Guy (Yat goh ho yan)',
-    artist: 'Minor Nipper',
-    publishedThe: '10/31/2021',
-    duration: '11:54 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 40,
-    track_name: 'County Teacher, The (Venkovský ucitel)',
-    artist: 'Carolin Lawford',
-    publishedThe: '5/25/2021',
-    duration: '4:05 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 41,
-    track_name: 'E.T. the Extra-Terrestrial',
-    artist: 'Engelbert Kelson',
-    publishedThe: '6/13/2021',
-    duration: '10:51 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 42,
-    track_name: 'Circle of Deceit (Die Fälschung)',
-    artist: 'Ernest Lovell',
-    publishedThe: '9/6/2021',
-    duration: '2:33 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 43,
-    track_name: 'Nurse Betty',
-    artist: 'Myron Bannard',
-    publishedThe: '8/8/2021',
-    duration: '6:17 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 44,
-    track_name: 'Major Payne',
-    artist: 'Wallie Cowles',
-    publishedThe: '11/13/2021',
-    duration: '11:24 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 45,
-    track_name: 'Conclave, The',
-    artist: 'Colline McGahern',
-    publishedThe: '7/29/2021',
-    duration: '11:12 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 46,
-    track_name: 'Stay Cool',
-    artist: 'Nial Hardi',
-    publishedThe: '11/11/2021',
-    duration: '9:13 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 47,
-    track_name: 'Cage aux Folles II, La',
-    artist: 'Anatola Randle',
-    publishedThe: '1/31/2022',
-    duration: '8:38 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 48,
-    track_name: 'Pumpkin Eater, The',
-    artist: 'Angie Rainsbury',
-    publishedThe: '1/10/2022',
-    duration: '5:25 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 49,
-    track_name: 'Reefer Madness: The Movie Musical',
-    artist: 'Waylen Shotbolt',
-    publishedThe: '8/13/2021',
-    duration: '12:24 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 50,
-    track_name: 'Van Helsing',
-    artist: 'Gherardo Reckless',
-    publishedThe: '10/22/2021',
-    duration: '9:16 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 51,
-    track_name: 'Hester Street',
-    artist: 'Rivkah Linggard',
-    publishedThe: '6/23/2021',
-    duration: '5:49 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 52,
-    track_name: 'Recipes for Disaster',
-    artist: 'Feodor Baccas',
-    publishedThe: '6/18/2021',
-    duration: '11:03 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 53,
-    track_name: 'Strange Days',
-    artist: 'Winna Howen',
-    publishedThe: '9/14/2021',
-    duration: '2:25 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 54,
-    track_name: 'When Nietzsche Wept',
-    artist: 'Garvy McParlin',
-    publishedThe: '8/22/2021',
-    duration: '4:56 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 55,
-    track_name: 'Resident Evil: Retribution',
-    artist: 'Buffy Worsom',
-    publishedThe: '5/27/2021',
-    duration: '3:47 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 56,
-    track_name: 'Poll Diaries, The (Poll)',
-    artist: 'Bren Holsall',
-    publishedThe: '10/18/2021',
-    duration: '12:43 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 57,
-    track_name: 'Guns of Fort Petticoat, The',
-    artist: 'Granger Peacop',
-    publishedThe: '5/24/2021',
-    duration: '11:30 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 58,
-    track_name: 'Ambition',
-    artist: 'Donn Harnetty',
-    publishedThe: '3/11/2021',
-    duration: '1:44 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 59,
-    track_name: 'Shocker',
-    artist: 'Brandtr Hazleton',
-    publishedThe: '1/26/2022',
-    duration: '9:07 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 60,
-    track_name: 'On Guard (Bossu, Le)',
-    artist: 'Shelby Julian',
-    publishedThe: '12/2/2021',
-    duration: '2:01 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 61,
-    track_name: 'Temptation of St. Tony, The (Püha Tõnu kiusamine)',
-    artist: 'Lindsy Whall',
-    publishedThe: '6/19/2021',
-    duration: '12:11 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 62,
-    track_name: 'Panic',
-    artist: 'Hollyanne Yon',
-    publishedThe: '5/6/2021',
-    duration: '8:29 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 63,
-    track_name: 'Antiviral',
-    artist: 'Rhiamon Tersay',
-    publishedThe: '4/21/2021',
-    duration: '5:33 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 64,
-    track_name: 'Countdown',
-    artist: 'Laurice Padson',
-    publishedThe: '11/20/2021',
-    duration: '8:27 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 65,
-    track_name: 'Eye of the Beholder',
-    artist: 'Crosby Goadbie',
-    publishedThe: '3/20/2021',
-    duration: '6:21 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 66,
-    track_name: 'Houseguest',
-    artist: 'Jard Huddleston',
-    publishedThe: '10/5/2021',
-    duration: '4:51 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 67,
-    track_name: 'For the Bible Tells Me So',
-    artist: 'Merv Millington',
-    publishedThe: '9/11/2021',
-    duration: '5:57 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 68,
-    track_name: 'Mr. Magoo',
-    artist: 'Rex Foulcher',
-    publishedThe: '3/19/2021',
-    duration: '12:37 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 69,
-    track_name: 'Blondie on a Budget',
-    artist: 'Golda Pickless',
-    publishedThe: '12/23/2021',
-    duration: '7:57 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 70,
-    track_name: 'Closing the Ring',
-    artist: 'Taddeusz Kmiec',
-    publishedThe: '5/30/2021',
-    duration: '1:23 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 71,
-    track_name: 'Crime and Punishment in Suburbia',
-    artist: 'Hollyanne Borsnall',
-    publishedThe: '5/20/2021',
-    duration: '2:05 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 72,
-    track_name: 'Beyond Therapy',
-    artist: 'Bennie Brayne',
-    publishedThe: '1/4/2022',
-    duration: '4:33 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 73,
-    track_name:
-      'Halloween H20: 20 Years Later (Halloween 7: The Revenge of Laurie Strode)',
-    artist: 'Byrom Poxson',
-    publishedThe: '1/10/2022',
-    duration: '8:46 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 74,
-    track_name: 'Night Porter, The (Portiere di notte, Il)',
-    artist: 'Germana Cecchetelli',
-    publishedThe: '6/4/2021',
-    duration: '7:30 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 75,
-    track_name: 'Rosa Luxemburg',
-    artist: 'Temp Studeart',
-    publishedThe: '1/15/2022',
-    duration: '9:47 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 76,
-    track_name: 'Step Up Revolution',
-    artist: 'Kane Fairbrace',
-    publishedThe: '7/25/2021',
-    duration: '4:48 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 77,
-    track_name: 'Gloria',
-    artist: 'Chrissie Scrowton',
-    publishedThe: '10/9/2021',
-    duration: '7:45 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 78,
-    track_name: 'Children On Their Birthdays',
-    artist: 'Gasper Netherwood',
-    publishedThe: '11/24/2021',
-    duration: '5:06 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 79,
-    track_name: 'Bite the Bullet',
-    artist: 'Delmar McGloin',
-    publishedThe: '10/3/2021',
-    duration: '6:03 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 80,
-    track_name: 'Heart Is a Lonely Hunter, The',
-    artist: 'Dinny Gookey',
-    publishedThe: '12/15/2021',
-    duration: '1:18 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 81,
-    track_name: 'Road to Morocco',
-    artist: 'Lezley Sprigings',
-    publishedThe: '11/10/2021',
-    duration: '8:48 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 82,
-    track_name: 'Escape Artist, The',
-    artist: 'Dimitry Catteroll',
-    publishedThe: '11/5/2021',
-    duration: '3:46 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 83,
-    track_name: 'Kung Pow: Enter the Fist',
-    artist: 'Noami Ranger',
-    publishedThe: '7/12/2021',
-    duration: '7:39 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 84,
-    track_name: 'Icicle Thief, The (Ladri di saponette)',
-    artist: 'Tobiah Ficken',
-    publishedThe: '12/1/2021',
-    duration: '2:24 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 85,
-    track_name: 'Clubland (a.k.a. Introducing the Dwights)',
-    artist: 'Dione Gabbatiss',
-    publishedThe: '6/25/2021',
-    duration: '11:42 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 86,
-    track_name: 'Dilemma, The',
-    artist: 'Lock Winsiowiecki',
-    publishedThe: '3/18/2021',
-    duration: '8:09 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 87,
-    track_name: 'Endangered Species',
-    artist: 'Luther Willoughey',
-    publishedThe: '3/8/2021',
-    duration: '2:38 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 88,
-    track_name: 'Green Dolphin Street',
-    artist: 'Lauri Yegorkin',
-    publishedThe: '9/17/2021',
-    duration: '5:30 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 89,
-    track_name: "Class of Nuke 'Em High",
-    artist: 'Rosalyn Willas',
-    publishedThe: '3/28/2021',
-    duration: '5:34 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 90,
-    track_name: 'D.O.A.',
-    artist: 'Stirling Lambird',
-    publishedThe: '12/14/2021',
-    duration: '4:29 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 91,
-    track_name: 'Carey Treatment, The',
-    artist: 'Annette Badwick',
-    publishedThe: '5/13/2021',
-    duration: '2:45 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 92,
-    track_name: 'Little Italy',
-    artist: 'Philbert Millier',
-    publishedThe: '10/12/2021',
-    duration: '6:48 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 93,
-    track_name: 'Otello',
-    artist: 'Othella Braitling',
-    publishedThe: '1/21/2022',
-    duration: '4:32 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 94,
-    track_name: 'Dare',
-    artist: 'Trent Philpotts',
-    publishedThe: '9/27/2021',
-    duration: '4:08 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 95,
-    track_name: 'How to Train Your Dragon 2',
-    artist: 'Micky Mowbray',
-    publishedThe: '11/6/2021',
-    duration: '8:16 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 96,
-    track_name: 'Narrow Margin, The',
-    artist: 'Vi MacLise',
-    publishedThe: '3/12/2021',
-    duration: '8:32 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 97,
-    track_name: "Gun in Betty Lou's Handbag, The",
-    artist: 'Ezekiel Furminger',
-    publishedThe: '10/11/2021',
-    duration: '3:29 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 98,
-    track_name: 'Day of the Dead 2: Contagium',
-    artist: 'Chiquia Heap',
-    publishedThe: '7/29/2021',
-    duration: '7:00 AM',
-    isOneOfFav: false,
-  },
-  {
-    id: 99,
-    track_name: "Starflight: The Plane That Couldn't Land",
-    artist: 'Willetta Hearn',
-    publishedThe: '4/19/2021',
-    duration: '5:48 PM',
-    isOneOfFav: false,
-  },
-  {
-    id: 100,
-    track_name: 'River, The (Joki)',
-    artist: 'Dorelle Fawkes',
-    publishedThe: '12/22/2021',
-    duration: '4:58 AM',
-    isOneOfFav: false,
-  },
-];
+// let dummySongData = [
+//   {
+//     id: 80,
+//     track_name: 'Heart Is a Lonely Hunter, The',
+//     artist: 'Dinny Gookey',
+//     publishedThe: '12/15/2021',
+//     duration: '1:18 PM',
+//     isOneOfFav: false,
+//   },
+//   {
+//     id: 81,
+//     track_name: 'Road to Morocco',
+//     artist: 'Lezley Sprigings',
+//     publishedThe: '11/10/2021',
+//     duration: '8:48 AM',
+//     isOneOfFav: false,
+//   },
+//   {
+//     id: 82,
+//     track_name: 'Escape Artist, The',
+//     artist: 'Dimitry Catteroll',
+//     publishedThe: '11/5/2021',
+//     duration: '3:46 PM',
+//     isOneOfFav: false,
+//   },
+//   {
+//     id: 83,
+//     track_name: 'Kung Pow: Enter the Fist',
+//     artist: 'Noami Ranger',
+//     publishedThe: '7/12/2021',
+//     duration: '7:39 AM',
+//     isOneOfFav: false,
+//   },
+//   {
+//     id: 84,
+//     track_name: 'Icicle Thief, The (Ladri di saponette)',
+//     artist: 'Tobiah Ficken',
+//     publishedThe: '12/1/2021',
+//     duration: '2:24 PM',
+//     isOneOfFav: false,
+//   },
+//   {
+//     id: 85,
+//     track_name: 'Clubland (a.k.a. Introducing the Dwights)',
+//     artist: 'Dione Gabbatiss',
+//     publishedThe: '6/25/2021',
+//     duration: '11:42 PM',
+//     isOneOfFav: false,
+//   },
+//   {
+//     id: 86,
+//     track_name: 'Dilemma, The',
+//     artist: 'Lock Winsiowiecki',
+//     publishedThe: '3/18/2021',
+//     duration: '8:09 AM',
+//     isOneOfFav: false,
+//   },
+//   {
+//     id: 87,
+//     track_name: 'Endangered Species',
+//     artist: 'Luther Willoughey',
+//     publishedThe: '3/8/2021',
+//     duration: '2:38 AM',
+//     isOneOfFav: false,
+//   },
+//   {
+//     id: 88,
+//     track_name: 'Green Dolphin Street',
+//     artist: 'Lauri Yegorkin',
+//     publishedThe: '9/17/2021',
+//     duration: '5:30 AM',
+//     isOneOfFav: false,
+//   },
+//   {
+//     id: 89,
+//     track_name: "Class of Nuke 'Em High",
+//     artist: 'Rosalyn Willas',
+//     publishedThe: '3/28/2021',
+//     duration: '5:34 AM',
+//     isOneOfFav: false,
+//   },
+//   {
+//     id: 90,
+//     track_name: 'D.O.A.',
+//     artist: 'Stirling Lambird',
+//     publishedThe: '12/14/2021',
+//     duration: '4:29 PM',
+//     isOneOfFav: false,
+//   },
+//   {
+//     id: 91,
+//     track_name: 'Carey Treatment, The',
+//     artist: 'Annette Badwick',
+//     publishedThe: '5/13/2021',
+//     duration: '2:45 AM',
+//     isOneOfFav: false,
+//   },
+//   {
+//     id: 92,
+//     track_name: 'Little Italy',
+//     artist: 'Philbert Millier',
+//     publishedThe: '10/12/2021',
+//     duration: '6:48 AM',
+//     isOneOfFav: false,
+//   },
+//   {
+//     id: 93,
+//     track_name: 'Otello',
+//     artist: 'Othella Braitling',
+//     publishedThe: '1/21/2022',
+//     duration: '4:32 AM',
+//     isOneOfFav: false,
+//   },
+//   {
+//     id: 94,
+//     track_name: 'Dare',
+//     artist: 'Trent Philpotts',
+//     publishedThe: '9/27/2021',
+//     duration: '4:08 PM',
+//     isOneOfFav: false,
+//   },
+//   {
+//     id: 95,
+//     track_name: 'How to Train Your Dragon 2',
+//     artist: 'Micky Mowbray',
+//     publishedThe: '11/6/2021',
+//     duration: '8:16 PM',
+//     isOneOfFav: false,
+//   },
+//   {
+//     id: 96,
+//     track_name: 'Narrow Margin, The',
+//     artist: 'Vi MacLise',
+//     publishedThe: '3/12/2021',
+//     duration: '8:32 PM',
+//     isOneOfFav: false,
+//   },
+//   {
+//     id: 97,
+//     track_name: "Gun in Betty Lou's Handbag, The",
+//     artist: 'Ezekiel Furminger',
+//     publishedThe: '10/11/2021',
+//     duration: '3:29 AM',
+//     isOneOfFav: false,
+//   },
+//   {
+//     id: 98,
+//     track_name: 'Day of the Dead 2: Contagium',
+//     artist: 'Chiquia Heap',
+//     publishedThe: '7/29/2021',
+//     duration: '7:00 AM',
+//     isOneOfFav: false,
+//   },
+//   {
+//     id: 99,
+//     track_name: "Starflight: The Plane That Couldn't Land",
+//     artist: 'Willetta Hearn',
+//     publishedThe: '4/19/2021',
+//     duration: '5:48 PM',
+//     isOneOfFav: false,
+//   },
+//   {
+//     id: 100,
+//     track_name: 'River, The (Joki)',
+//     artist: 'Dorelle Fawkes',
+//     publishedThe: '12/22/2021',
+//     duration: '4:58 AM',
+//     isOneOfFav: false,
+//   },
+// ];
 
-export const crudMethods = {
-  getSongs: async function () {
-    return await new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(dummySongData);
-      }, 3000);
-    });
-  },
+// class AppConfiguration {
+//   language;
+//   homepage;
+//   theme;
 
-  getSongById: async function (id) {
-    return await new Promise((resolve) => {
-      setTimeout(() => {
-        const song = dummySongData.find((song) => song.idTrack === id);
-        song ? resolve(song) : resolve(null);
-      }, 3000);
-    });
-  },
+//   getConfigurationForUser() {
+//     this.homepage = {
+//       tabs: [
+//         {
+//           title: 'Songs',
+//           theme: 'bg-success',
+//           itsPage: '/',
+//           component: 'SongList',
+//         },
 
-  addSong: async function (songItem) {
-    return await new Promise((resolve) => {
-      setTimeout(() => {
-        dummySongData = [...dummySongData, songItem];
-        resolve(dummySongData);
-      }, 3000);
-    });
-  },
+//         {
+//           title: 'Favorites',
+//           theme: 'danger',
+//           itsPage: '/favourites',
+//           component: 'Favourites',
+//         },
+//         {
+//           title: 'Generator',
+//           theme: 'info',
+//           itsPage: '/songGenerator',
+//           component: 'SongGenerator',
+//         },
+//       ],
+//       font: 'whatever',
+//     };
+//     this.theme = 'info';
+//     return this;
+//   }
 
-  removeSong: async function (id) {
-    return await new Promise((resolve) => {
-      setTimeout(() => {
-        dummySongData = dummySongData.filter((song) => song.id !== id);
-        resolve(dummySongData);
-      }, 3000);
-    });
-  },
-};
+//   getConfigurationForVisitor() {
+//     this.homepage = {
+//       tabs: [
+//         {
+//           title: 'Songs',
+//           theme: 'bg-success',
+//           itsPage: '/',
+//           component: 'SongList',
+//         },
 
-export const userInterfaceMethods = {
-  getTabs: function () {
-    return new Promise((resolve) => {
-      const tabs = [
-        {
-          title: 'Songs',
-          theme: ' bg-success',
-          itsPage: '/',
-          component: 'SongList',
-        },
+//         {
+//           title: 'Favorites',
+//           theme: 'danger',
+//           itsPage: '/favourites',
+//           component: 'Favourites',
+//         },
+//       ],
+//       font: 'whatever',
+//     };
+//     this.theme = 'success';
+//     return this;
+//   }
 
-        {
-          title: 'Favorites',
-          theme: ' bg-danger',
-          itsPage: '/favourites',
-          component: 'Favourites',
-        },
+//   setLanguage(language) {
+//     this.language = language === 'ENG' || language !== 'ITA' ? 'ENG' : 'ITA';
+//     return this;
+//   }
+// }
 
-        {
-          title: 'Generator',
-          theme: ' bg-info',
-          itsPage: '/songGenerator',
-          component: 'SongGenerator',
-        },
-      ];
-      setTimeout(() => {
-        resolve(tabs);
-      }, 3000);
-    });
-  },
-};
+// export const songCrudMethods = {
+//   getSongs: async function () {
+//     return await new Promise((resolve) => {
+//       setTimeout(() => {
+//         resolve(dummySongData);
+//       }, 3000);
+//     });
+//   },
+
+//   getSongById: async function (id) {
+//     return await new Promise((resolve) => {
+//       setTimeout(() => {
+//         const song = dummySongData.find((song) => song.idTrack === id);
+//         song ? resolve(song) : resolve(null);
+//       }, 3000);
+//     });
+//   },
+
+//   addSong: async function (songItem) {
+//     return await new Promise((resolve) => {
+//       setTimeout(() => {
+//         dummySongData = [...dummySongData, songItem];
+//         resolve(dummySongData);
+//       }, 3000);
+//     });
+//   },
+
+//   removeSong: async function (id) {
+//     return await new Promise((resolve) => {
+//       setTimeout(() => {
+//         dummySongData = dummySongData.filter((song) => song.id !== id);
+//         resolve(dummySongData);
+//       }, 3000);
+//     });
+//   },
+// };
