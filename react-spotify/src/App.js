@@ -1,6 +1,17 @@
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Index from './components/layout/body/Index';
+import { Provider } from './store/Context';
+
 function App() {
   return (
-    <h1>Hello This is The best music app in the ... computer I own XD</h1>
+    <Provider>
+      <Router>
+        <React.Fragment>
+          <Index />
+        </React.Fragment>
+      </Router>
+    </Provider>
   );
 }
 
