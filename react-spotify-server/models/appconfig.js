@@ -18,7 +18,7 @@ export default class AppConfigurationOf {
           title: 'Songs',
           theme: 'bg-success',
           itsPage: '/',
-          component: 'SongList',
+          component: 'SongsList',
         },
 
         {
@@ -47,7 +47,7 @@ export default class AppConfigurationOf {
           title: 'Songs',
           theme: 'bg-success',
           itsPage: '/',
-          component: 'SongList',
+          component: 'SongsList',
         },
 
         {

@@ -2,7 +2,7 @@ import React from 'react';
 import { Consumer } from '../../store/Context';
 import Song from './Song';
 
-const SongList = ({ addToFavourites }) => {
+const SongsList = ({ addToFavourites }) => {
   const removeFromList = (songId) => {
     addToFavourites(songId);
   };
@@ -10,8 +10,8 @@ const SongList = ({ addToFavourites }) => {
   return (
     <Consumer>
       {(state) => {
-        if (state && state.songList) {
-          const songs = state.songList.filter((song) => !song.isOneOfFav);
+        if (state && state.songsList) {
+          const songs = state.songsList.filter((song) => !song.isOneOfFav);
           return (
             <>
               <div className='row p-3 '>
@@ -31,4 +31,4 @@ const SongList = ({ addToFavourites }) => {
   );
 };
 
-export default SongList;
+export default SongsList;

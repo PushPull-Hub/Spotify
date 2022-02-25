@@ -18,7 +18,7 @@ class AppConfigurationOf {
           title: 'Songs',
           theme: 'success',
           itsPage: '/',
-          component: 'SongList',
+          component: 'SongsList',
         },
 
         {
@@ -38,7 +38,7 @@ class AppConfigurationOf {
         title: 'Songs',
         theme: 'success',
         itsPage: '/',
-        component: 'SongList',
+        component: 'SongsList',
       },
       font: 'whatever',
     };

@@ -10,8 +10,8 @@ const Favourites = ({ removeFromFavourites }) => {
     <Consumer>
       {(state) => {
         console.log(state);
-        if (state && state.songList) {
-          const favSongs = state.songList.filter((song) => !!song.isOneOfFav);
+        if (state && state.songsList) {
+          const favSongs = state.songsList.filter((song) => !!song.isOneOfFav);
           return (
             <>
               <div className='row p-3 '>

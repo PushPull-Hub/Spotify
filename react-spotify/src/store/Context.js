@@ -18,10 +18,10 @@ export class Provider extends Component {
   async initializeState() {
     return new Promise(async (resolve) => {
       try {
-        const songList = await this.getSongsPromise();
+        const songsList = await this.getSongsPromise();
         const configs = await this.getConfigurationsPromise();
         const updateState = this.updateState;
-        resolve({ songList, configs, updateState });
+        resolve({ songsList, configs, updateState });
       } catch (error) {
         console.error(error);
         resolve(null);
