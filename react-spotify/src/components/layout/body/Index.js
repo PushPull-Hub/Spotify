@@ -7,7 +7,7 @@ import Favourites from '../../Tab2/Favourites';
 import SongGenerator from '../../Tab3/SongGenerator';
 import { Context } from '../../../store/Context';
 
-const Index = () => {
+function Index() {
   const state = useContext(Context);
 
   const setToActive = (tab) => {
@@ -58,6 +58,6 @@ const Index = () => {
   } else {
     return null;
   }
-};
+}
 
 export default Index;

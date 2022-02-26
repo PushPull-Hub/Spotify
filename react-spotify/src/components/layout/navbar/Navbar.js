@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Navbar = ({ tabs, setToActive }) => {
+function Navbar({ tabs, setToActive }) {
   if (tabs) {
     return (
       <React.Fragment>
@@ -30,5 +30,5 @@ const Navbar = ({ tabs, setToActive }) => {
   } else {
     return null;
   }
-};
+}
 export default Navbar;

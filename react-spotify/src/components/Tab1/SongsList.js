@@ -2,7 +2,7 @@ import React from 'react';
 import { Consumer } from '../../store/Context';
 import Song from './Song';
 
-const SongsList = ({ addToFavourites }) => {
+function SongsList({ addToFavourites }) {
   const removeFromList = (songId) => {
     addToFavourites(songId);
   };
@@ -29,6 +29,6 @@ const SongsList = ({ addToFavourites }) => {
       }}
     </Consumer>
   );
-};
+}
 
 export default SongsList;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const SongGenerator = () => {
+function SongGenerator() {
   const [trackName, setTrackName] = useState('');
   const [selectedArtist, setSelectedArtist] = useState('artist');
 
@@ -48,6 +48,6 @@ const SongGenerator = () => {
       </form>
     </>
   );
-};
+}
 
 export default SongGenerator;

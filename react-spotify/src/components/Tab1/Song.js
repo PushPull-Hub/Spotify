@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Song = ({ song, changeSongStatue }) => {
+function Song({ song, changeSongStatue }) {
   const handleHeartIconClick = (id) => {
     changeSongStatue(id);
   };
@@ -44,6 +44,6 @@ const Song = ({ song, changeSongStatue }) => {
   } else {
     /* spinner */
   }
-};
+}
 
 export default Song;
