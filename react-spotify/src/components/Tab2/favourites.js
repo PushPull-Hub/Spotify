@@ -1,7 +1,7 @@
 import React from 'react';
 import { Consumer } from '../../store/Context';
 import Song from '../Tab1/Song';
-function Favourites({ removeFromFavourites }) {
+const Favourites = ({ removeFromFavourites }) => {
   const removeFromList = (songId) => {
     removeFromFavourites(songId);
   };
@@ -28,5 +28,5 @@ function Favourites({ removeFromFavourites }) {
       }}
     </Consumer>
   );
-}
+};
 export default Favourites;
