@@ -3,13 +3,13 @@ import axios from 'axios';
 const apiUrl = process.env.REACT_APP_API_ENDPOINT;
 
 const inisializeApi = (options) => {
-  let headers = {
+  const headers = {
     Accept: 'application/json',
   };
   return axios.create({
     baseURL: apiUrl,
     timeout: 31000,
-    headers: headers,
+    headers,
   });
 };
 
@@ -31,5 +31,6 @@ export class ConfigurationsApi {
   constructor() {
     this.client = null;
   }
+
   getAppConfigurations = () => inisializeApi().get('/configurations');
 }

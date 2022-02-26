@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { SongApi, ConfigurationsApi } from '../components/helper/Apis';
+
+import { ConfigurationsApi, SongApi } from '../components/helper/Apis';
 
 export const Context = React.createContext();
 
@@ -20,7 +21,7 @@ export class Provider extends Component {
       try {
         const songsList = await this.getSongsPromise();
         const configs = await this.getConfigurationsPromise();
-        const updateState = this.updateState;
+        const { updateState } = this;
         resolve({ songsList, configs, updateState });
       } catch (error) {
         console.error(error);
@@ -68,4 +69,4 @@ export class Provider extends Component {
   }
 }
 
-export const Consumer = Context.Consumer;
+export const { Consumer } = Context;
