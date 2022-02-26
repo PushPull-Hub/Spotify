@@ -3,12 +3,13 @@ import { Switch, Route } from 'react-router-dom';
 
 import Navbar from '../navbar/Navbar';
 import SongList from '../../Tab1/SongsList';
-import Favourites from '../../Tab2/Favourites';
 import SongGenerator from '../../Tab3/SongGenerator';
 import { Context } from '../../../store/Context';
 
 function Index() {
   const state = useContext(Context);
+  const songsList = [];
+  const favoritesList = [];
 
   const setToActive = (tab) => {
     const newState = { ...state };
@@ -17,47 +18,44 @@ function Index() {
   };
 
   const changeSongStatus = (songId) => {
-    const newSongsList = [...state.songsList];
-    let theTargettedSong = newSongsList.find((song) => song.id === songId);
-    theTargettedSong.isOneOfFav = !theTargettedSong.isOneOfFav;
+    const newSongsList = state.songsList.map((song) =>
+      song.id === songId ? (song.isOneOfFav = !song.isOneOfFav) : song
+    );
     state.updateState({ songsList: newSongsList });
   };
 
-  if (state && state.configs) {
-    const tabs = state.configs.homepage.tabs;
-    const activeTab = state.configs.homepage.activeTab;
-    return (
-      <>
-        <Navbar tabs={tabs} setToActive={setToActive} />
-        <div className={'container d-flex flex-column  bg-' + activeTab.theme}>
-          <h1 className='text-center m-3 text-light'>{activeTab.title}</h1>
-          <Switch>
-            <Route
-              exact
-              path='/'
-              render={(props) => (
-                <SongList addToFavourites={changeSongStatus} />
-              )}
-            ></Route>
-            <Route
-              exact
-              path='/favourites'
-              render={(props) => (
-                <Favourites removeFromFavourites={changeSongStatus} />
-              )}
-            ></Route>
-            <Route
-              exact
-              path='/songGenerator'
-              component={SongGenerator}
-            ></Route>
-          </Switch>
-        </div>
-      </>
-    );
-  } else {
+  if (!state || !state.configs) {
     return null;
   }
+
+  const tabs = state.configs.homepage.tabs;
+  const activeTab = state.configs.homepage.activeTab;
+  state.songsList.forEach((song) => {
+    !!song.isOneOfFav ? favoritesList.push(song) : songsList.push(song);
+  });
+
+  return (
+    <>
+      <Navbar tabs={tabs} setToActive={setToActive} />
+      <div className={'container d-flex flex-column  bg-' + activeTab.theme}>
+        <h1 className='text-center m-3 text-light'>{activeTab.title}</h1>
+        <Switch>
+          <Route exact path='/'>
+            <SongList changeSongStatue={changeSongStatus} list={songsList} />
+          </Route>
+          <Route path='/favourites'>
+            <SongList
+              changeSongStatue={changeSongStatus}
+              list={favoritesList}
+            />
+          </Route>
+          <Route path='/songGenerator'>
+            <SongGenerator />
+          </Route>
+        </Switch>
+      </div>
+    </>
+  );
 }
 
 export default Index;
