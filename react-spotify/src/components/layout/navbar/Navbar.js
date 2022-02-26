@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Navbar({ tabs, setToActive }) {
   if (tabs) {
     return (
-      <React.Fragment>
+      <>
         <nav className='navbar navbar-dark bg-success mb-5'>
           <span className='navbar-brand mb-0 h1 mx-auto'>Songify</span>
         </nav>
@@ -25,7 +25,7 @@ function Navbar({ tabs, setToActive }) {
             ))}
           </ul>
         </div>
-      </React.Fragment>
+      </>
     );
   } else {
     return null;

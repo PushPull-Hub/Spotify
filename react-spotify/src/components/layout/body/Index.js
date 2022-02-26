@@ -27,7 +27,7 @@ function Index() {
     const tabs = state.configs.homepage.tabs;
     const activeTab = state.configs.homepage.activeTab;
     return (
-      <React.Fragment>
+      <>
         <Navbar tabs={tabs} setToActive={setToActive} />
         <div className={'container d-flex flex-column  bg-' + activeTab.theme}>
           <h1 className='text-center m-3 text-light'>{activeTab.title}</h1>
@@ -53,7 +53,7 @@ function Index() {
             ></Route>
           </Switch>
         </div>
-      </React.Fragment>
+      </>
     );
   } else {
     return null;
