@@ -1,33 +1,16 @@
 import React from 'react';
-import { Consumer } from '../../store/Context';
 import Song from './Song';
 
-function SongsList({ addToFavourites }) {
-  const removeFromList = (songId) => {
-    addToFavourites(songId);
-  };
-
+function SongsList({ changeSongStatue, list }) {
+  if (!list) {
+    return null;
+  }
   return (
-    <Consumer>
-      {(state) => {
-        if (state && state.songsList) {
-          const songs = state.songsList.filter((song) => !song.isOneOfFav);
-          return (
-            <>
-              <div className='row p-3 '>
-                {songs.map((song) => (
-                  <Song
-                    key={song.id}
-                    song={song}
-                    changeSongStatue={removeFromList}
-                  />
-                ))}
-              </div>
-            </>
-          );
-        }
-      }}
-    </Consumer>
+    <div className='row p-3 '>
+      {list.map((song) => (
+        <Song key={song.id} song={song} changeSongStatue={changeSongStatue} />
+      ))}
+    </div>
   );
 }
 
