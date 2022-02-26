@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import Navbar from '../navbar/Navbar';
 import SongList from '../../Tab1/SongsList';
-import Favourites from '../../Tab2/favourites';
+import Favourites from '../../Tab2/Favourites';
 import SongGenerator from '../../Tab3/SongGenerator';
 import { Context } from '../../../store/Context';
 
@@ -17,7 +17,7 @@ const Index = () => {
   };
 
   const changeSongStatus = (songId) => {
-    const newSongsList = [...state.songList];
+    const newSongsList = [...state.songsList];
     let theTargettedSong = newSongsList.find((song) => song.id === songId);
     theTargettedSong.isOneOfFav = !theTargettedSong.isOneOfFav;
     state.updateState({ songsList: newSongsList });
