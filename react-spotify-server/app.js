@@ -10,7 +10,11 @@ app.use(bodyParser.json());
 
 app.use('/songs', routesOf.song);
 app.use('/configurations', routesOf.appConfiguration);
+app.use(
+  '/.well-known/apple-app-site-association',
+  routesOf.replyWithAAppleConfigurationFile
+);
 
-app.use('', appService.replyWith404);
+app.use('', appService.replyWithAWelcomingPage);
 
 module.exports = app;
